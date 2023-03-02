@@ -1,7 +1,6 @@
 plugins {
     id("convention.android.application")
     id("convention.android.application.compose")
-    id("convention.android.application.flavors")
     id("convention.android.application.jacoco")
     id("convention.android.hilt")
     id("jacoco")
@@ -58,7 +57,7 @@ android {
             isIncludeAndroidResources = true
         }
     }
-    namespace = "com.google.samples.apps.nowinandroid"
+    namespace = "com.example.convention"
 }
 
 dependencies {
@@ -76,6 +75,13 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtimeCompose)
     implementation(libs.androidx.compose.runtime.tracing)
     implementation(libs.androidx.compose.material3.windowSizeClass)
+    api(libs.androidx.compose.foundation)
+    api(libs.androidx.compose.foundation.layout)
+    api(libs.androidx.compose.material.iconsExtended)
+    api(libs.androidx.compose.material3)
+    debugApi(libs.androidx.compose.ui.tooling)
+    api(libs.androidx.compose.ui.tooling.preview)
+    api(libs.androidx.compose.ui.util)
     implementation(libs.androidx.hilt.navigation.compose)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.window.manager)

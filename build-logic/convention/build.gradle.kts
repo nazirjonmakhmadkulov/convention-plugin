@@ -64,9 +64,5 @@ gradlePlugin {
             id = "convention.android.application.firebase"
             implementationClass = "AndroidApplicationFirebaseConventionPlugin"
         }
-        register("androidFlavors") {
-            id = "convention.android.application.flavors"
-            implementationClass = "AndroidApplicationFlavorsConventionPlugin"
-        }
     }
 }

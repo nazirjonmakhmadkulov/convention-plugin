@@ -1,6 +1,5 @@
 import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import com.android.build.gradle.LibraryExtension
-import com.example.convention.configureFlavors
 import com.example.convention.configureGradleManagedDevices
 import com.example.convention.configureKotlinAndroid
 import com.example.convention.configurePrintApksTask
@@ -23,7 +22,6 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
             extensions.configure<LibraryExtension> {
                 configureKotlinAndroid(this)
                 defaultConfig.targetSdk = 33
-                configureFlavors(this)
                 configureGradleManagedDevices(this)
             }
             extensions.configure<LibraryAndroidComponentsExtension> {
