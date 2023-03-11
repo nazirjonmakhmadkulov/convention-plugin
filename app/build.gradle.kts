@@ -14,7 +14,7 @@ android {
         versionName = "0.0.1" // X.Y.Z; X = Major, Y = minor, Z = Patch level
 
         // Custom test runner to set up Hilt dependency graph
-        testInstrumentationRunner = "com.example.convention.core.testing.NiaTestRunner"
+        testInstrumentationRunner = "com.example.convention.core.testing.TestRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
