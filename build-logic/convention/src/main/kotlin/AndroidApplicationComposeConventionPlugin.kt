@@ -1,3 +1,4 @@
+
 import com.android.build.api.dsl.ApplicationExtension
 import com.example.convention.configureAndroidCompose
 import org.gradle.api.Plugin
@@ -8,6 +9,9 @@ class AndroidApplicationComposeConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             pluginManager.apply("com.android.application")
+            // Screenshot Tests
+            pluginManager.apply("io.github.takahirom.roborazzi")
+
             val extension = extensions.getByType<ApplicationExtension>()
             configureAndroidCompose(extension)
         }

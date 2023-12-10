@@ -1,10 +1,11 @@
 plugins {
-    id("convention.android.application")
-    id("convention.android.application.compose")
-    id("convention.android.application.jacoco")
-    id("convention.android.hilt")
+    alias(libs.plugins.convention.android.application)
+    alias(libs.plugins.convention.android.application.compose)
+    alias(libs.plugins.convention.android.application.jacoco)
+    alias(libs.plugins.convention.android.hilt)
     id("jacoco")
-    id("convention.android.application.firebase")
+//    alias(libs.plugins.convention.android.application.firebase)
+    alias(libs.plugins.baselineprofile)
 }
 
 android {
@@ -47,7 +48,7 @@ android {
         }
     }
 
-    packagingOptions {
+    packaging {
         resources {
             excludes.add("/META-INF/{AL2.0,LGPL2.1}")
         }
@@ -66,7 +67,6 @@ dependencies {
     androidTestImplementation(kotlin("test"))
     debugImplementation(libs.androidx.compose.ui.testManifest)
 
-    implementation(libs.accompanist.systemuicontroller)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)
